@@ -1,0 +1,175 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg,rgb(0, 9, 0),rgba(13, 0, 0, 0.989));
+    padding: 10px;
+}
+
+.todo{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    background:linear-gradient(180deg,rgb(227, 226, 226),rgba(236, 233, 233, 0.989));
+    padding: 50px 30px 70px;
+   
+   
+     
+   
+}
+
+.todo h2 {
+
+    color: rgb(217, 14, 10);
+    display: flex;
+    padding: 10px;
+    font-size: 25px;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.todo h2 img {
+
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+   
+    padding-left: 20px;
+    margin-bottom: 20px;
+   
+    
+}
+
+
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    
+    padding: 10px;
+   font-size: 20px;
+  
+}
+
+
+
+button{
+    border: none;
+    outline: none;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background: #dd5a2f;
+    color: white;
+   
+    cursor: pointer;
+
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background: rgb(230, 184, 184);
+}
+
+ul li::before{
+
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    
+    border-radius: 30%;
+    background-image: url(images/todo1.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 15px;
+    
+
+}
+
+
+ul li.check{
+    color: #060606;
+    text-decoration:line-through;
+
+}
+
+ul li.check:hover{
+    background: rgb(8, 182, 34);
+}
+
+ul li.check::before{
+    background-image: url(images/check.png);
+}
+
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: rgb(9, 8, 8);
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: red;
+    border-radius: 50px;;
+}
+
+
+
+
+/* media queires */
+
+
+
+@media screen and (max-width: 500px) {
+    .todo {
+        width: 90%;
+        margin: 50px auto 20px;
+        padding: 20px 15px 40px;
+    }
+
+    .row {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    input {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 12px 30px;
+    }
+
+    ul li {
+        padding: 10px 8px 10px 40px;
+    }
+
+    ul li::before {
+        top: 6px;
+        left: 5px;
+    }
+
+    ul li span {
+        top: 0;
+    }
+}
